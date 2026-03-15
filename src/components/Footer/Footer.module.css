@@ -1,10 +1,8 @@
 .footer {
-  /* background-color: var(--color-secondary-light); */
-  /* color: var(--color-secondary-light-contrast); */
-  padding-block: var(--spacing-lg);
+  border-top: var(--border);
+  padding-inline: var(--spacing-md);
   padding-top: var(--spacing-sm);
   padding-bottom: var(--spacing-md);
-  border-top: var(--border);
 }
 
 .inner {
@@ -68,11 +66,17 @@
   aspect-ratio: 1;
   border-radius: var(--border-radius-full);
   background-color: #c26b381a;
+  color: var(--color-action);
   justify-content: center;
   align-items: center;
   transition: background-color var(--animation-duration-fast) var(--animation-timing);
 }
 
 .shareBtn:hover {
-  background-color: #c26b38;
+  background-color: var(--color-action);
+  color: var(--color-action-contrast);
+}
+
+.icon {
+  border-radius: 0;
 }

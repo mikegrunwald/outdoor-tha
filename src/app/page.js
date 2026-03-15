@@ -1,14 +1,15 @@
-import Header from "@/components/Header/Header";
-import Hero from "@/components/Hero/Hero";
 import ActivitySection from "@/components/ActivitySection/ActivitySection";
 import Footer from "@/components/Footer/Footer";
-import { fishing, skiing, hikingTrekking } from "@/data/explore";
+import Header from "@/components/Header/Header";
+import Hero from "@/components/Hero/Hero";
+import { fishing, hikingTrekking, skiing } from "@/data/explore";
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main className={styles.main}>
         <Hero />
         <ActivitySection {...fishing} />
         <ActivitySection {...skiing} />

@@ -250,6 +250,7 @@
     --color-tertiary-light-contrast: var(--color-white);
     --color-tertiary-dark-contrast: var(--color-white);
     --color-action: var(--color-primary);
+    --color-action-contrast: var(--color-white);
     --color-action-light: oklch(from var(--color-action) calc(l + .15) c h);
     --color-action-dark: oklch(from var(--color-action) calc(l - .15) c h);
     --color-action-light-contrast: var(--color-white);
