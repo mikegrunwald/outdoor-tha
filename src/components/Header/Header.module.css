@@ -1,0 +1,114 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-viewport-background-translucent);
+  backdrop-filter: blur(12px);
+  border-block-end: var(--border);
+  padding-block: calc(var(--spacing-xs) * 0.5);
+  padding-inline: var(--spacing-md);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-md);
+  max-inline-size: 80rem;
+  margin-inline: auto;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-h4);
+  color: var(--color-secondary);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-inline-start: auto;
+}
+
+.navLink {
+  color: var(--color-text-nav);
+  text-decoration: none;
+  font-size: var(--control-font-size);
+  font-weight: var(--font-weight-medium);
+  transition: color var(--animation-duration-fast) var(--animation-timing);
+}
+
+.navLink:hover {
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-inline-start: auto;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background-color: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding-inline: var(--control-padding-inline-sm);
+  block-size: var(--control-block-size-sm);
+}
+
+.iconWrap {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.search .iconWrap {
+  opacity: 0.6;
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  font-size: var(--font-size-body-sm);
+  color: var(--color-text-primary);
+  inline-size: 12rem;
+  block-size: 100%;
+  margin-block-end: 0;
+  padding-inline: 0;
+}
+
+.searchInput:focus-visible {
+  outline: none;
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+@media (max-width: 48rem) {
+  .nav {
+    display: none;
+  }
+
+  .searchInput {
+    inline-size: 8rem;
+  }
+}

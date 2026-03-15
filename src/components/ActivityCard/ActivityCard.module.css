@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-raised);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--elevation-2);
+  transition: box-shadow var(--animation-duration-fast) var(--animation-timing),
+    translate var(--animation-duration-fast) var(--animation-timing);
+}
+
+.card:hover {
+  box-shadow: var(--elevation-4);
+  translate: 0 -2px;
+}
+
+.imageWrap {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: scale var(--animation-duration) var(--animation-timing);
+}
+
+.card:hover .image {
+  scale: 1.04;
+}
+
+.badge {
+  position: absolute;
+  inset-block-start: var(--spacing-xs);
+  inset-inline-start: var(--spacing-xs);
+  background-color: var(--color-viewport-background-translucent);
+  backdrop-filter: blur(8px);
+  color: var(--color-text-primary);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-semi-bold);
+  padding-block: calc(var(--spacing-xs) * 0.4);
+  padding-inline: var(--spacing-xs);
+  border-radius: var(--border-radius);
+}
+
+.badgeSolid {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light-contrast);
+  backdrop-filter: none;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+}
+
+.body h3 {
+  margin-block-end: 0;
+}
+
+.body p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-body-sm);
+  margin-block-end: 0;
+}

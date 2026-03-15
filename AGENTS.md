@@ -91,6 +91,26 @@ src/components/{ComponentName}/
   + Folder: `PascalCase` (e.g.,  `Button`)
   + File: `PascalCase.jsx` (e.g.,  `Button.jsx`)
 
+### Images & Icons
+
+`steez.css` sets `img, svg { width: 100% }` globally. This is intentional for content images but causes icons and fixed-size images to blow up to fill their container. **Do not modify steez.css to fix this.** Instead, wrap the `<Image>` (or `<img>`) in a container element with explicit width/height:
+
+```jsx
+<span className={styles.iconWrap} style={{ width: 20, height: 20 }}>
+  <Image src="/images/icon-example.svg" alt="" width={20} height={20} />
+</span>
+```
+
+```css
+/* In the component's CSS module */
+.iconWrap {
+  display: flex;
+  flex-shrink: 0;
+}
+```
+
+The container constrains the image so `width: 100%` fills it at the intended size. Always use this pattern for icons and fixed-dimension images.
+
 ### Layout
 
 Use flexbox even if Figma shows absolute positioning. Infer flex direction/gap/alignment from visual arrangement.

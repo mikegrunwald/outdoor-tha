@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__figma__get_design_context",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/eef80812-0414-49ea-af29-f98ced9b9e7c\" -o hero-bg.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/134b99a4-1867-409d-8a19-9a1c365ed3a6\" -o fishing-lake-tahoe.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/b61dd0d1-0c39-4b3f-a855-bdba4698b99f\" -o fishing-kenai-river.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/70c8cca6-dfeb-464c-be45-4a7fa468de5b\" -o fishing-key-west.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/7c3e474e-a3e4-4dcd-b0fd-6ca60c3d6b60\" -o skiing-aspen.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/3193bc6e-d4b5-487a-b557-fd74f2311bf5\" -o skiing-zermatt.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/a7b03c78-aaf6-43ef-b92b-074db2b92f06\" -o skiing-niseko.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/86dd3f76-4556-4c04-97ca-218722e17a00\" -o hiking-patagonia.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/b661f342-abf9-4643-9d28-7224a5fb007d\" -o hiking-zion.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/607886b3-c549-49e1-a7c3-2799066ed424\" -o hiking-everest.jpg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/35558e88-f777-40ec-9c39-eae0d97497dd\" -o icon-fishing.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/747dc9cc-31ce-4aed-990a-99a9cab1c57d\" -o icon-chevron-right.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/69079f92-ce1a-4e52-a69b-1d1f583cb018\" -o icon-skiing.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/46d23fff-3385-4666-92c6-8647666f4011\" -o icon-hiking.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/847b13a0-7211-4b90-96ed-426cf98835d5\" -o icon-logo-footer.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/45a74844-b84d-4818-9eb7-3aa1bb488dc0\" -o icon-share.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/e083438a-0484-4bff-b163-aab1a735d3d0\" -o icon-mail.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/8634e583-d6b7-4543-8b7d-8de9347efb1f\" -o icon-logo.svg)",
+      "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/f7e39ce6-be52-4de3-8fa2-d41a81c8db87\" -o icon-search.svg)",
+      "Bash(npx next:*)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(kill 6886)"
+    ]
+  }
+}
