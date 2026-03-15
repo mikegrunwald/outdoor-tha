@@ -492,3 +492,55 @@ Available as `@custom-media` (requires Lightning CSS at build time):
 ## Browser support
 
 Chrome/Edge 123+, Firefox 128+, Safari 17.5+.
+
+# Content & Copy Data
+
+## Rule: Separate text content from components
+
+All UI text/copy MUST live in `src/data/` — never hard-code strings in JSX.
+
+## Figma-to-data extraction
+
+When translating a Figma design, extract **all** visible text content into a data file **before** building the component. This includes headings, body copy, button labels, placeholder text, captions, tooltips, alt text, and list items.
+
+### File structure
+
+```
+src/data/
+├── home.js          # copy for the home page
+├── about.js         # copy for another page
+├── shared.js        # copy reused across pages (nav, footer, site name)
+```
+
+One file per page or feature. Use `shared.js` for cross-cutting copy (navigation links, footer text, site-wide labels).
+
+### Data format
+
+Export a plain object organized by section. Keys describe the UI region; values are strings or arrays of objects.
+
+```js
+// src/data/home.js
+export const home = {
+  hero: {
+    heading: "Explore the Outdoors",
+    subheading: "Your next adventure starts here",
+    cta: "Get Started",
+  },
+  features: [
+    {
+      title: "Trail Maps",
+      description: "Detailed maps for every skill level.",
+    },
+  ],
+};
+```
+
+### Rules
+
+1. **Extract first, build second.** Before writing any component JSX, create or update the corresponding data file with all text from the Figma design.
+2. **No string literals in JSX.** Components import from `src/data/` and render via object access: `{home.hero.heading}`.
+3. **One file per page/feature.** Name the file after the page route or feature (e.g., `home.js`, `pricing.js`, `onboarding.js`).
+4. **Use `shared.js` for reusable copy.** Nav links, footer text, site name, and any string used on 2+ pages.
+5. **Mirror Figma section names.** Use the Figma frame/section names as object keys (converted to camelCase) so copy is easy to trace back to the design.
+6. **Keep values flat when possible.** Prefer `{ heading: "...", subheading: "..." }` over deeply nested structures. Use arrays for repeated items (cards, features, list items).
+7. **Images stay out.** Data files hold text only. Image paths/URLs belong in component code or a separate asset map.
