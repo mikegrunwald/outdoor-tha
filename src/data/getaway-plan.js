@@ -1,0 +1,57 @@
+export const getawayPlan = {
+  pageTitle: "Plan your getaway",
+  steps: {
+    details: { label: "Trip Details", number: 1 },
+    lodging: { label: "Lodging", number: 2 },
+    activities: { label: "Activities", number: 3 },
+    summary: { label: "Summary", number: 4 },
+  },
+  tripDetails: {
+    heading: "Plan your getaway",
+    arrivalLabel: "Arrival Date",
+    departureLabel: "Departure Date",
+    adultsLabel: "Adults",
+    childrenLabel: "Children",
+    continueButton: "Continue to Lodging",
+  },
+  lodgingStep: {
+    heading: "Choose your lodging",
+    filtersButton: "Filters",
+    sortButton: "Sort by",
+    selectButton: "Select",
+    selectedButton: "Selected",
+    sleepsLabel: "Sleeps",
+    bedroomsLabel: "Bedrooms",
+    perNight: "/ night",
+  },
+  activitiesStep: {
+    heading: "Choose your activities",
+    perPerson: "/ person",
+    addButton: "Add",
+    addedButton: "Added",
+  },
+  summaryStep: {
+    heading: "Review your getaway",
+    tripDetailsLabel: "Trip Details",
+    lodgingLabel: "Lodging",
+    activitiesLabel: "Activities",
+    addOnsLabel: "Add-Ons",
+  },
+  cart: {
+    heading: "Your Trip Cart",
+    subtitle: "Review your getaway",
+    recommendedHeading: "Recommended For You",
+    lineItemsHeading: "Line Items",
+    serviceFeeLabel: "Service Fee",
+    taxesLabel: "Taxes",
+    totalLabel: "Total Price",
+    checkoutButton: "Checkout Now",
+    emptyMessage: "Start building your trip!",
+  },
+  comingSoon: {
+    heading: "Coming Soon",
+    message:
+      "This destination is not yet available for booking. Check back soon for updates!",
+    backButton: "Back to Explore",
+  },
+};

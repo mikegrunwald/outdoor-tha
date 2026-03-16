@@ -1,0 +1,46 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.controls button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.controls svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+
+@media (max-width: 64rem) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

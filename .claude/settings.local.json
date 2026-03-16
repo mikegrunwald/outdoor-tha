@@ -23,7 +23,14 @@
       "Bash(curl -sL \"https://www.figma.com/api/mcp/asset/f7e39ce6-be52-4de3-8fa2-d41a81c8db87\" -o icon-search.svg)",
       "Bash(npx next:*)",
       "mcp__Claude_Preview__preview_start",
-      "Bash(kill 6886)"
+      "Bash(kill 6886)",
+      "Bash(find /Users/mikeg/ActiveTheory/personal-playground/outdoor-tha/src/data -type f -name *.js -o -name *.ts -o -name *.json)",
+      "Bash(grep -r \"zustand\\\\|redux\\\\|context\\\\|Provider\" /Users/mikeg/ActiveTheory/personal-playground/outdoor-tha/src --include=*.js --include=*.jsx)",
+      "Bash(npm install:*)",
+      "Bash(xargs kill:*)",
+      "mcp__figma__get_screenshot",
+      "Bash(kill -9 23922 37672)",
+      "Bash(npm ls:*)"
     ]
   }
 }

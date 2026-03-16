@@ -1,8 +1,10 @@
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./ActivityCard.module.css";
 
-export default function ActivityCard({ title, description, image, badge, badgeVariant }) {
+export default function ActivityCard({ id, title, description, image, badge, badgeVariant }) {
   return (
+    <Link href={`/getaway-plan/${id}`} className={styles.link}>
     <article className={styles.card}>
       <div className={styles.imageWrap}>
         <Image
@@ -25,5 +27,6 @@ export default function ActivityCard({ title, description, image, badge, badgeVa
         <p>{description}</p>
       </div>
     </article>
+    </Link>
   );
 }

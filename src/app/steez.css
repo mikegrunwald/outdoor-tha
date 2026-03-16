@@ -286,6 +286,7 @@
     --color-text-tertiary: light-dark(var(--color-secondary), var(--color-secondary-light));
     --color-text-body: light-dark(var(--color-neutral-8), var(--color-neutral-2));
     --color-border: light-dark(var(--color-primary), var(--color-neutral-7));
+    --color-border-light: light-dark(var(--color-primary-light), var(--color-neutral-7));
     --color-viewport-background: #f8f7f6;
     --color-viewport-background-translucent: #f8f7f6b9;
     --font-primary-stack: "Varela Round", system-ui, -apple-system, blinkmacsystemfont, "Segoe UI", roboto, sans-serif;
@@ -313,7 +314,8 @@
     --font-size-display: calc(var(--font-size-base) * pow(var(--type-ratio), 10));
     --font-weight-heading: var(--font-weight-bold);
     --font-size-body: var(--font-size-base);
-    --font-size-body-sm: calc(var(--font-size-base) * .75);
+    --font-size-body-xs: calc(var(--font-size-base) * 0.5);
+    --font-size-body-sm: calc(var(--font-size-base) * 0.75);
     --font-size-body-lg: calc(var(--font-size-base) * 1.25);
     --line-height-reset: 1;
     --line-height-text: 1.5;
@@ -362,6 +364,7 @@
     --border-width: 1px;
     --border-style: solid;
     --border-color: var(--color-border);
+    --border-color-light: var(--color-border-light);
     --border: var(--border-width) var(--border-style) var(--border-color);
     --border-radius: .5rem;
     --border-radius-lg: .75rem;
@@ -381,7 +384,7 @@
     --control-font-size: calc(var(--font-size-body) * .875);
     --control-font-weight: var(--font-weight-normal);
     --control-padding-inline-sm: var(--spacing-xs);
-    --control-padding-inline: calc(var(--spacing-base) * .5);
+    --control-padding-inline: calc(var(--spacing-base) * .25);
     --control-padding-inline-lg: calc(var(--spacing-base) * .875);
     --button-font-weight: var(--control-font-weight);
     --button-font-size: var(--control-font-size)
@@ -781,13 +784,14 @@
   [type=color], [type=date], [type=datetime], [type=datetime-local], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], input:not([type]), textarea {
     background-color: var(--color-surface);
     border: var(--border);
+    border-color: var(--color-action);
     border-radius: var(--border-radius);
     font-family: var(--font-family);
     font-size: var(--control-font-size);
     inline-size: 100%;
     padding-inline: var(--control-padding-inline);
     transition: border-color var(--animation-duration) var(--animation-timing);
-    margin-block-end: var(--spacing-sm);
+    /* margin-block-end: var(--spacing-sm); */
     display: block;
 
     &:not(textarea, [type=color]) {
