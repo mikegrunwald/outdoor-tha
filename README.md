@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ROAM & BOARD : Outdoor Adventures
+
+An interactive prototype exploring a modern booking experience for bundling lodging, activities, and add-ons into an outdoor trip — with a focus on an in-cart recommendation systems within a trip-building wizard.
+
+**[Live Demo](https://outdoor-tha.vercel.app)**
+
+## Table of Contents
+
+- [ROAM \& BOARD : Outdoor Adventures](#roam--board--outdoor-adventures)
+  - [Table of Contents](#table-of-contents)
+  - [Prototype Features](#prototype-features)
+  - [Technologies Used](#technologies-used)
+  - [Discoveries \& Learnings](#discoveries--learnings)
+  - [Getting Started](#getting-started)
+
+## Prototype Features
+
+The core focus of this prototype was to explore an **in-cart recommendation system within a trip-building wizard**. The experience flows as follows:
+
+* **Destination selection** — The landing page presents a curated set of outdoor adventure types (mountain, lake, desert, etc.). The customer picks a destination, which sets the context for everything that follows.
+* **Trip wizard** — After selecting a destination, the customer enters a guided wizard to build out their trip:
+  + **Details selection** — Enter arrival and departure dates and of attending adults and children
+  + **Lodging selection** — Browse and choose from available accommodations at the destination
+  + > **NOTE:** For prototyping purposes, the wizard experience really ends here.
+  + **Activities & experiences** — Add ski tickets, guided hikes, dining reservations, and more
+  + **Equipment rentals** — Gear up with rental options relevant to the selected adventure type
+* **Smart in-cart recommendations** — As the itinerary takes shape, the system surfaces contextual suggestions based on what's already been selected. Adding ski tickets suggests a ski package (tickets + rentals + lesson); adding children suggests Kids Club or a family package; adding equipment suggests a guided tour or lesson.
+
+> Currently optimized for desktop viewports only.
+
+## Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| [Next.js 16](https://nextjs.org/) (canary) | React framework with App Router |
+| [React 19](https://react.dev/) | UI library |
+| [React Compiler](https://react.dev/learn/react-compiler) | Automatic memoization via Babel plugin |
+| [Zustand](https://zustand.docs.pmnd.rs/) | Lightweight state management for cart and trip state |
+| [React Icons](https://react-icons.github.io/react-icons/) | Icon library |
+| CSS Modules | Component-scoped styling |
+| [Vercel](https://vercel.com/) | Deployment and hosting |
+
+## Discoveries & Learnings
+
+**Designing without constraints is its own constraint.** When presented with a blue-sky opportunity to build a booking experience without any prior brand identity or real data sources, it becomes surprisingly difficult to design meaningful constraints for a prototype. The absence of existing brand guidelines, content hierarchies, and data schemas means you're simultaneously designing the product *and* the boundaries it lives within.
+
+**A linear wizard may not be the right pattern for trip building.** A typical step-by-step wizard flow works well for simple, sequential tasks — but building a detailed outdoor trip involves browsing, comparing, and revisiting decisions. Lodging selection in particular would not meet customer requirements without additional ways to explore options (filtering, comparison views, detail modals). The process is more exploratory than linear.
+
+**In-cart recommendations need special treatment on mobile.** Surfacing contextual bundle suggestions alongside a growing cart works naturally on wider viewports, but a mobile experience would need careful consideration — perhaps a bottom sheet, inline expansion, or a dedicated recommendations step — to avoid overwhelming the user or burying the suggestions.
+
+**A persistent agenda view adds clarity.** A constant or easily accessible agenda/itinerary UI could help customers gain a better understanding of their scheduled activities, rental windows, and overall availability. This would reduce cognitive load and make it easier to spot gaps or conflicts in the trip plan.
+
+**Date selection could be simplified.** A potential UI optimization would be to combine the arrival and departure date pickers into a single range-based date picker component, reducing interaction steps and making the travel window more visually obvious.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) to view the prototype.
