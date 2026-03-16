@@ -17,7 +17,7 @@ export default function Hero() {
       <div className={styles.content}>
         <h1 className="display">{hero.heading}</h1>
         <p className={styles.subheading}>{hero.subheading}</p>
-        <button type="button" className="lg">{hero.cta}</button>
+        <a href="#activities" type="button" className="lg">{hero.cta}</a>
       </div>
     </section>
   );

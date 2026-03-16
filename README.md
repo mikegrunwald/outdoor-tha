@@ -6,12 +6,21 @@ An interactive prototype exploring a modern booking experience for bundling lodg
 
 ## Table of Contents
 
-- [ROAM \& BOARD : Outdoor Adventures](#roam--board--outdoor-adventures)
-  - [Table of Contents](#table-of-contents)
-  - [Prototype Features](#prototype-features)
-  - [Technologies Used](#technologies-used)
-  - [Discoveries \& Learnings](#discoveries--learnings)
-  - [Getting Started](#getting-started)
+- [Happy Path](#happy-path)
+- [Prototype Features](#prototype-features)
+- [Technologies Used](#technologies-used)
+- [Discoveries \& Learnings](#discoveries--learnings)
+- [Getting Started](#getting-started)
+
+## Happy Path
+
+1. Select a destination from the activities section on the landing page
+   1. (Hopefully there was content scaffoled out for your selection, if not click "back to explore" and try again)
+2. Select a date range, number of adults, and children
+3. Choose a lodging option
+4. View relevant activities and add-on options in the cart sidebar
+5. add activities and add-on options with the "+" button to see totals and line items updated
+6. Rince and repeat with different selections to see different recommendations
 
 ## Prototype Features
 

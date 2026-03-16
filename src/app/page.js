@@ -11,9 +11,11 @@ export default function Home() {
       <Header />
       <main className={styles.main}>
         <Hero />
-        <ActivitySection {...fishing} />
-        <ActivitySection {...skiing} />
-        <ActivitySection {...hikingTrekking} />
+        <div id="activities">
+          <ActivitySection {...fishing} />
+          <ActivitySection {...skiing} />
+          <ActivitySection {...hikingTrekking} />
+        </div>
       </main>
       <Footer />
     </>
