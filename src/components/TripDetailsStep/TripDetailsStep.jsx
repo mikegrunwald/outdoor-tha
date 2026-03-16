@@ -6,8 +6,11 @@ import useGetawayStore from "@/store/useGetawayStore";
 import styles from "./TripDetailsStep.module.css";
 
 export default function TripDetailsStep({ destinationId }) {
-	const { dates, guests, setDates, setGuests, setDestination } =
-		useGetawayStore();
+	const dates = useGetawayStore((s) => s.dates);
+	const guests = useGetawayStore((s) => s.guests);
+	const setDates = useGetawayStore((s) => s.setDates);
+	const setGuests = useGetawayStore((s) => s.setGuests);
+	const setDestination = useGetawayStore((s) => s.setDestination);
 	const copy = getawayPlan.tripDetails;
 
 	// Sync destination on mount

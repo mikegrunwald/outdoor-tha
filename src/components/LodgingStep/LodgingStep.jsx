@@ -7,7 +7,8 @@ import useGetawayStore from "@/store/useGetawayStore";
 import styles from "./LodgingStep.module.css";
 
 export default function LodgingStep({ lodgingOptions }) {
-	const { selectedLodgingId, selectLodging } = useGetawayStore();
+	const selectedLodgingId = useGetawayStore((s) => s.selectedLodgingId);
+	const selectLodging = useGetawayStore((s) => s.selectLodging);
 	const copy = getawayPlan.lodgingStep;
 
 	return (

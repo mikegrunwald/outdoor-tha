@@ -9,7 +9,6 @@ import {
   FaUsers,
 } from "react-icons/fa6";
 import { getawayPlan } from "@/data/getaway-plan";
-import { getLodgingById } from "@/data/lodging";
 import {
   computeTotal,
   getNights,
@@ -20,24 +19,18 @@ import useGetawayStore from "@/store/useGetawayStore";
 import styles from "./Cart.module.css";
 
 export default function Cart({ destination }) {
-	const {
-		dates,
-		guests,
-		selectedLodgingId,
-		selectedActivityIds,
-		selectedAddOnIds,
-		selectedBundleId,
-		toggleAddOn,
-		selectBundle,
-	} = useGetawayStore();
+	const dates = useGetawayStore((s) => s.dates);
+	const guests = useGetawayStore((s) => s.guests);
+	const selectedLodgingId = useGetawayStore((s) => s.selectedLodgingId);
+	const selectedActivityIds = useGetawayStore((s) => s.selectedActivityIds);
+	const selectedAddOnIds = useGetawayStore((s) => s.selectedAddOnIds);
+	const selectedBundleId = useGetawayStore((s) => s.selectedBundleId);
+	const toggleAddOn = useGetawayStore((s) => s.toggleAddOn);
+	const selectBundle = useGetawayStore((s) => s.selectBundle);
 
 	const copy = getawayPlan.cart;
 	const nights = getNights(dates.checkIn, dates.checkOut);
 	const guestCount = guests.adults + guests.children;
-
-	const selectedLodging = selectedLodgingId
-		? getLodgingById(selectedLodgingId)
-		: null;
 
 	const recommendedAddOns = getRecommendedAddOns(selectedLodgingId).filter(
 		(addon) => !selectedAddOnIds.includes(addon.id),
@@ -166,8 +159,8 @@ export default function Cart({ destination }) {
 			{hasSelections && (
 				<div className={styles.lineItems}>
 					<h3 className={styles.sectionLabel}>{copy.lineItemsHeading}</h3>
-					{lineItems.map((item, i) => (
-						<div key={i} className={styles.lineItem}>
+					{lineItems.map((item) => (
+						<div key={item.label} className={styles.lineItem}>
 							<span>{item.label}</span>
 							<span className={item.amount < 0 ? styles.discount : ""}>
 								{item.amount < 0 ? "-" : ""}$

@@ -30,7 +30,14 @@
       "Bash(xargs kill:*)",
       "mcp__figma__get_screenshot",
       "Bash(kill -9 23922 37672)",
-      "Bash(npm ls:*)"
+      "Bash(npm ls:*)",
+      "Bash(grep -r \"dynamic\\\\|lazy\\\\|Suspense\" src --include=*.js --include=*.jsx)",
+      "Bash(ls -lh public/images/*.jpg)",
+      "Read(//Users/mikeg/ActiveTheory/personal-playground/outdoor-tha/**)",
+      "Bash(find src/components -name \"*.jsx\" -exec wc -l {})",
+      "Bash(wc -l src/app/page.module.css src/app/getaway-plan/[id]/page.module.css)",
+      "Bash(wc -l src/app/layout.js src/app/page.js src/app/getaway-plan/[id]/page.js)",
+      "Bash(du -h public/images/*)"
     ]
   }
 }

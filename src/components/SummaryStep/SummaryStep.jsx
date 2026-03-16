@@ -10,14 +10,12 @@ import { getNights, computeTotal } from "@/lib/recommendations";
 import styles from "./SummaryStep.module.css";
 
 export default function SummaryStep({ destination }) {
-  const {
-    dates,
-    guests,
-    selectedLodgingId,
-    selectedActivityIds,
-    selectedAddOnIds,
-    selectedBundleId,
-  } = useGetawayStore();
+  const dates = useGetawayStore((s) => s.dates);
+  const guests = useGetawayStore((s) => s.guests);
+  const selectedLodgingId = useGetawayStore((s) => s.selectedLodgingId);
+  const selectedActivityIds = useGetawayStore((s) => s.selectedActivityIds);
+  const selectedAddOnIds = useGetawayStore((s) => s.selectedAddOnIds);
+  const selectedBundleId = useGetawayStore((s) => s.selectedBundleId);
 
   const copy = getawayPlan.summaryStep;
   const nights = getNights(dates.checkIn, dates.checkOut);

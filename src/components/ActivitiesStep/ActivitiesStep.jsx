@@ -6,7 +6,8 @@ import { getawayPlan } from "@/data/getaway-plan";
 import styles from "./ActivitiesStep.module.css";
 
 export default function ActivitiesStep({ activityOptions }) {
-  const { selectedActivityIds, toggleActivity } = useGetawayStore();
+  const selectedActivityIds = useGetawayStore((s) => s.selectedActivityIds);
+  const toggleActivity = useGetawayStore((s) => s.toggleActivity);
   const copy = getawayPlan.activitiesStep;
 
   return (

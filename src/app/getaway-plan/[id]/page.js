@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import { getDestinationById } from "@/data/destinations";
 import { getLodgingByIds } from "@/data/lodging";
 import { getActivitiesByIds } from "@/data/activities";
@@ -5,13 +6,24 @@ import { getawayPlan } from "@/data/getaway-plan";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import StepNav from "@/components/StepNav/StepNav";
-import TripDetailsStep from "@/components/TripDetailsStep/TripDetailsStep";
-import LodgingStep from "@/components/LodgingStep/LodgingStep";
-import ActivitiesStep from "@/components/ActivitiesStep/ActivitiesStep";
-import SummaryStep from "@/components/SummaryStep/SummaryStep";
-import Cart from "@/components/Cart/Cart";
 import Link from "next/link";
 import styles from "./page.module.css";
+
+const TripDetailsStep = dynamic(() => import("@/components/TripDetailsStep/TripDetailsStep"));
+const LodgingStep = dynamic(() => import("@/components/LodgingStep/LodgingStep"));
+const ActivitiesStep = dynamic(() => import("@/components/ActivitiesStep/ActivitiesStep"));
+const SummaryStep = dynamic(() => import("@/components/SummaryStep/SummaryStep"));
+const Cart = dynamic(() => import("@/components/Cart/Cart"));
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const destination = getDestinationById(id);
+  if (!destination) return { title: "Destination Not Found — Roam & Board" };
+  return {
+    title: `${destination.title} — Roam & Board`,
+    description: destination.description,
+  };
+}
 
 export default async function GetawayPlanPage({ params, searchParams }) {
   const { id } = await params;
