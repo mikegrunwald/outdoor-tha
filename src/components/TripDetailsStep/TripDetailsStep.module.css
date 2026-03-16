@@ -51,6 +51,8 @@
   border-radius: var(--border-radius);
   block-size: var(--control-block-size);
   overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 .counterBtn {

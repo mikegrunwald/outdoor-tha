@@ -24,7 +24,8 @@ export default function TripDetailsStep({ destinationId }) {
 				<div className={styles.field}>
 					<label htmlFor="checkIn" className={styles.label}>{copy.arrivalLabel}</label>
 						<input
-              name="checkIn"
+							id="checkIn"
+							name="checkIn"
 							type="date"
 							value={dates.checkIn}
 							onChange={(e) => setDates({ ...dates, checkIn: e.target.value })}
@@ -34,7 +35,8 @@ export default function TripDetailsStep({ destinationId }) {
 				<div className={styles.field}>
 					<label htmlFor="checkOut" className={styles.label}>{copy.departureLabel}</label>
 						<input
-              name="checkOut"
+							id="checkOut"
+							name="checkOut"
 							type="date"
 							value={dates.checkOut}
 							onChange={(e) => setDates({ ...dates, checkOut: e.target.value })}
@@ -42,8 +44,8 @@ export default function TripDetailsStep({ destinationId }) {
 						/>
 				</div>
 				<div className={styles.field}>
-					<label htmlFor="adults" className={styles.label}>{copy.adultsLabel}</label>
-					<div id="adults" className={styles.counter}>
+					<span id="adults-label" className={styles.label}>{copy.adultsLabel}</span>
+					<fieldset aria-labelledby="adults-label" className={styles.counter}>
 						<button
 							type="button"
 							className={styles.counterBtn}
@@ -57,7 +59,7 @@ export default function TripDetailsStep({ destinationId }) {
 						>
 							{"\u2212"}
 						</button>
-						<span className={styles.counterValue}>{guests.adults}</span>
+						<span aria-live="polite" aria-atomic="true" className={styles.counterValue}>{guests.adults}</span>
 						<button
 							type="button"
 							className={styles.counterBtn}
@@ -68,11 +70,11 @@ export default function TripDetailsStep({ destinationId }) {
 						>
 							+
 						</button>
-					</div>
+					</fieldset>
 				</div>
 				<div className={styles.field}>
-					<label htmlFor="children" className={styles.label}>{copy.childrenLabel}</label>
-					<div id="children" className={styles.counter}>
+					<span id="children-label" className={styles.label}>{copy.childrenLabel}</span>
+					<fieldset aria-labelledby="children-label" className={styles.counter}>
 						<button
 							type="button"
 							className={styles.counterBtn}
@@ -86,7 +88,7 @@ export default function TripDetailsStep({ destinationId }) {
 						>
 							{"\u2212"}
 						</button>
-						<span className={styles.counterValue}>{guests.children}</span>
+						<span aria-live="polite" aria-atomic="true" className={styles.counterValue}>{guests.children}</span>
 						<button
 							type="button"
 							className={styles.counterBtn}
@@ -97,7 +99,7 @@ export default function TripDetailsStep({ destinationId }) {
 						>
 							+
 						</button>
-					</div>
+					</fieldset>
 				</div>
 			</div>
 		</div>
