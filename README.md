@@ -57,7 +57,7 @@ The core focus of this prototype was to explore an **in-cart recommendation syst
 
 **In-cart recommendations need special treatment on mobile.** Surfacing contextual bundle suggestions alongside a growing cart works naturally on wider viewports, but a mobile experience would need careful consideration — perhaps a bottom sheet, inline expansion, or a dedicated recommendations step — to avoid overwhelming the user or burying the suggestions.
 
-**A persistent agenda view adds clarity.** A constant or easily accessible agenda/itinerary UI could help customers gain a better understanding of their scheduled activities, rental windows, and overall availability. This would reduce cognitive load and make it easier to spot gaps or conflicts in the trip plan.
+**A persistent agenda view could add clarity.** A constant or easily accessible agenda/itinerary UI could help customers gain a better understanding of their scheduled activities, rental windows, and overall availability. This would reduce cognitive load and make it easier to spot gaps or conflicts in the trip plan.
 
 **Date selection could be simplified.** A potential UI optimization would be to combine the arrival and departure date pickers into a single range-based date picker component, reducing interaction steps and making the travel window more visually obvious.
 
